@@ -1,7 +1,7 @@
 <header class="top-header">
     <div class="container">
         <div class="row align-items-center">
-            <div class="text-center col-lg-7 col-lg-text-start">
+            <div class="text-center col-lg-7 text-lg-start">
                 <div class="header-left">
                     <div class="header-left-card">
                         <ul>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center col-lg-5 col-lg-text-start">
+            <div class="text-center col-lg-5 text-lg-end">
                 <div class="header-right">
                     <div class="top-social-link">
                         <ul>
@@ -97,12 +97,12 @@
                                     <a class="dropdown-item" href="#" id="navbarDropdown1" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Current Project
-                                        <i class='bx bx-chevron-down'></i>
+                                        {{-- <i class='bx bx-chevron-down'></i> --}}
                                     </a>
                                     <a class="dropdown-item" href="#" id="navbarDropdown2" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Complete Project
-                                        <i class='bx bx-chevron-down'></i>
+                                        {{-- <i class='bx bx-chevron-down'></i> --}}
                                     </a>
                                 </li>
                             </ul>
@@ -120,17 +120,17 @@
                                     <a class="dropdown-item" href="#" id="navbarDropdown1" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Construction Works
-                                        <i class='bx bx-chevron-down'></i>
+                                        {{-- <i class='bx bx-chevron-down'></i> --}}
                                     </a>
                                     <a class="dropdown-item" href="#" id="navbarDropdown2" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Construction Management
-                                        <i class='bx bx-chevron-down'></i>
+                                        {{-- <i class='bx bx-chevron-down'></i> --}}
                                     </a>
                                     <a class="dropdown-item" href="#" id="navbarDropdown3" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Construction Product Supply
-                                        <i class='bx bx-chevron-down'></i>
+                                        {{-- <i class='bx bx-chevron-down'></i> --}}
                                     </a>
                                 </li>
                             </ul>

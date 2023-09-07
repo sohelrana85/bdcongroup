@@ -99,7 +99,7 @@
     <div class="container">
         <div class="copy-right-text">
             <div class="row">
-                <div class="col-lg-6 col-12">
+                <div class="text-center col-lg-6 text-lg-start">
                     <p>
                         Copyright ©
                         <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -108,7 +108,7 @@
                         </script> {{ $content->com_name }}. All Rights
                     </p>
                 </div>
-                <div class="col-lg-6 col-12 text-end">
+                <div class="text-center col-lg-6 text-lg-end">
                     <p>Design & Developed By: <a href="https://sohelranabd.com/" target="_blank">Sohel Rana</a></p>
                 </div>
             </div>
