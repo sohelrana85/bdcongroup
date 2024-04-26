@@ -24,29 +24,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController:: class, 'index'])->name('index');
-Route::get('/about', [HomeController:: class, 'about'])->name('about');
-Route::get('/management', [HomeController:: class, 'management'])->name('management');
-Route::get('/products', [HomeController:: class, 'products'])->name('products');
-Route::get('/product/single/{slug}', [HomeController:: class, 'productDetails'])->name('product.single');
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/management', [HomeController::class, 'management'])->name('management');
+Route::get('/products', [HomeController::class, 'products'])->name('products');
+Route::get('/product/single/{slug}', [HomeController::class, 'productDetails'])->name('product.single');
 Route::get('/product/category/{id}', [HomeController::class, 'productCategory'])->name('product.category');
 Route::get('/export/product/category/{id}', [HomeController::class, 'productExport'])->name('export.product.category');
 Route::get('/import/product/category/{id}', [HomeController::class, 'productImport'])->name('import.product.category');
 Route::get('/product/suplier', [HomeController::class, 'productSuplier'])->name('product.suplier');
 Route::get('/product/brand/{id}', [HomeController::class, 'productBrand'])->name('product.brand');
 Route::get('/gallery/page', [HomeController::class, 'gallery'])->name('gallery.page');
-Route::get('/contact-us', [HomeController:: class, 'contact'])->name('contact');
-Route::post('/send/message', [HomeController:: class, 'sendMessage'])->name('send.message');
+Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact');
+Route::post('/send/message', [HomeController::class, 'sendMessage'])->name('send.message');
 
 Route::get('/product/search', [HomeController::class, 'search'])->name('search.product');
 
-Route::group(['middleware' => 'guest'], function() {
+Route::group(['middleware' => 'guest'], function () {
     // Authentication
     Route::get('/login', [AuthenticationController::class, 'login'])->name('login');
     Route::post('/login', [AuthenticationController::class, 'authCheck'])->name('login.check');
 });
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/registration', [AuthenticationController::class, 'registration'])->name('admin.registration');
     Route::post('/registration', [AuthenticationController::class, 'newUser'])->name('registration.store');
@@ -64,7 +64,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
     Route::post('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
     Route::delete('/category/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
-    
+
     //Brand Routes
     Route::get('/brands', [BrandController::class, 'index'])->name('brands.index');
     Route::post('/brand/store', [BrandController::class, 'store'])->name('brand.store');
@@ -104,7 +104,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/gallery/edit/{id}', [GalleryController::class, 'edit'])->name('gallery.edit');
     Route::post('/gallery/update/{id}', [GalleryController::class, 'update'])->name('gallery.update');
     Route::post('/gallery/delete', [GalleryController::class, 'destroy'])->name('gallery.delete');
-    
+
     // Client Review Routes
     Route::get('/clients', [ClientreviewController::class, 'index'])->name('clients.index');
     Route::post('/client/store', [ClientreviewController::class, 'store'])->name('client.store');
@@ -115,13 +115,13 @@ Route::group(['middleware' => 'auth'], function() {
     //Company Profile Routes
     Route::get('/company/profile', [CompanyprofileController::class, 'index'])->name('company.profile');
     Route::post('/company/profile/update/{id}', [CompanyprofileController::class, 'update'])->name('company.profile.update');
-    
+
     //Mission Vision Routes
     Route::get('/mission/vision', [MissionvisionController::class, 'index'])->name('mission.vision');
     Route::post('/mission/vision/update/{id}', [MissionvisionController::class, 'update'])->name('mission.vision.update');
-    
+
     // Public Message Routes
     Route::get('/messages', [ContactController::class, 'index'])->name('messages.index');
     Route::post('/message/delete', [ContactController::class, 'destroy'])->name('message.delete');
-
+    Route::post('/message/delete', [ContactController::class, 'destroy'])->name('message.delete');
 });
