@@ -123,4 +123,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Public Message Routes
     Route::get('/messages', [ContactController::class, 'index'])->name('messages.index');
     Route::post('/message/delete', [ContactController::class, 'destroy'])->name('message.delete');
+
+    // test purpose create route
+    Route::post('/message/delete', [ContactController::class, 'destroy'])->name('message.delete');
 });
